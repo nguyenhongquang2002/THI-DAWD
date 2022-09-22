@@ -2,78 +2,103 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activityMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/employee"
-        android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Employee add"
-        android:textSize="30dp"
-        android:gravity="center"/>
+        android:layout_centerHorizontal="true"
+        android:text="Employee App"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/employeename"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/employee"
-        android:layout_marginTop="10dp"
-        android:hint="Enter Employee Name "
-        tools:ignore="HardcodedText" />
+        android:layout_below="@id/title"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:height="30dp"
+        android:background="#f1f1f1"
+        android:hint="Enter Employee Name"
+        android:paddingStart="5dp"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
 
     <EditText
         android:id="@+id/designation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/employeename"
+        android:layout_below="@id/name"
+        android:layout_margin="5dp"
+        android:height="30dp"
+        android:background="#f1f1f1"
         android:hint="Enter Designation"
-        tools:ignore="HardcodedText" />
+        android:paddingStart="5dp"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
 
     <EditText
         android:id="@+id/salary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/designation"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:height="30dp"
+        android:background="#f1f1f1"
         android:hint="Enter Salary"
+        android:paddingStart="5dp"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/salary"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="#d0d0d0"
+        android:text="Add Employee"
+        android:textColor="@color/black"
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/salary"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Save"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/add"
+        android:backgroundTint="#d0d0d0"
+        android:text="Update Record"
+        android:textColor="@color/black"
         tools:ignore="HardcodedText" />
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/salary"
-        android:layout_toRightOf="@+id/save"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Update"
-        tools:ignore="HardcodedText" />
+
     <Button
         android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/salary"
-        android:layout_marginStart="40dp"
-        android:layout_toRightOf="@+id/edit"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/update"
+        android:backgroundTint="#d0d0d0"
         android:text="Delete"
+        android:textColor="@color/black"
         tools:ignore="HardcodedText" />
 
     <ListView
-        android:id="@+id/lsContact"
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/save" />
+        android:layout_below="@id/add"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp" />
 </RelativeLayout>
