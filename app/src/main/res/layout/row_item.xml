@@ -12,7 +12,7 @@
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_marginLeft="10dp"
-        android:textColor="#4B0082"
+        android:textColor="#ffffff"
         android:textSize="20dp" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:layout_columnWeight="1"
         android:layout_below="@+id/textViewName"
         android:layout_marginLeft="10dp"
-        android:textColor="#4B0082"
+        android:textColor="#ffffff"
         android:textSize="20dp" />
 
     <TextView
@@ -36,6 +36,6 @@
         android:layout_columnWeight="1"
         android:layout_below="@+id/textViewDesignation"
         android:layout_marginLeft="10dp"
-        android:textColor="#4B0082"
+        android:textColor="#ffffff"
         android:textSize="20dp" />
 </RelativeLayout>
